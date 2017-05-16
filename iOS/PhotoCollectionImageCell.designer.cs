@@ -7,15 +7,13 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace Image.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("PhotoCollectionImageCell")]
+    partial class PhotoCollectionImageCell
     {
-        [Outlet]
-        UIKit.UIButton Button { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
         }
