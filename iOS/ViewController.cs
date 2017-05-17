@@ -1,6 +1,7 @@
 ﻿using System;
 
 using UIKit;
+using Photos;
 
 namespace Image.iOS
 {
@@ -27,6 +28,18 @@ namespace Image.iOS
 
 			photoDataSource = new PhotoCollectionDataSource();
 			collectionView.DataSource = photoDataSource;
+
+			// 1
+			PHPhotoLibrary.SharedPhotoLibrary.RegisterChangeObserver((changeObserver) =>
+			{
+				//2
+				InvokeOnMainThread(() =>
+    			{
+      				  // 3
+       				 photoDataSource.ReloadPhotos();
+        				collectionView.ReloadData();
+    			});
+			});
 		}
 
 		public override void DidReceiveMemoryWarning()

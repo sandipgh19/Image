@@ -8,6 +8,12 @@ namespace Image.iOS
     {
         public PhotoCollectionImageCell (IntPtr handle) : base (handle)
         {
+
         }
+
+		public void SetImage(UIImage image)
+		{
+			cellImageView.Image = image;
+		}
     }
 }
