@@ -115,6 +115,10 @@
       <DependentUpon>PhotoCollectionImageCell.cs</DependentUpon>
     </Compile>
     <Compile Include="PhotoCollectionDataSource.cs" />
+    <Compile Include="&#x9;.cs" />
+    <Compile Include="&#x9;.designer.cs">
+      <DependentUpon>	.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
